@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Random Kitties</title>
+</head>
+
+<body class="bg-slate-900 ">
+    <header>
+        <nav>
+            <div class="flex justify-between items-center mx-auto max-w-screen-xl h-12">
+                <a href="#">
+                    <span class="text-cyan-400 self-center text-xl font-semibold whitespace-nowrap"> Random Kitties</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="w-full">
+        <h1 class="text-cyan-400 text-center text-xl font-bold pb-6">You can FAV ❤️ any kitti</h1>
+    </div>
+
+    <section class="flex justify-center" id="kittiesToFav">
+        <div class="grid grid-cols-3 gap-6 w-3/5" id="kittiesContainer" >
+        </div>
+    </section >
+
+
+    <section class="flex justify-center">
+        <div class="w-3/5 mt-4">
+            <div class="w-full">
+                <h1 class="text-cyan-400 text-left text-xl font-bold py-2">Upload your kitti</h1>
+            </div>
+            <div class="w-full flex-col">
+              <label for="formFileMultiple" class="form-label inline-block mb-2 text-gray-700">Only kitties Pls</label>              
+            <div class="flex">
+                <form class="flex w-full" id="uploadingForm">
+                    <input type="file" id="file" name="file" 
+                         class="form-control
+                                inline-block
+                                w-full
+                                px-3
+                                py-1.5
+                                text-base
+                                font-normal
+                                text-gray-700
+                                bg-slate-800 bg-clip-padding
+                                border border-solid border-gray-300
+                                rounded
+                                transition
+                                ease-in-out
+                                m-0
+                                rounded-r-none
+                                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" >
+                    <button onclick="uploadKittie()" type="button" 
+                        class="inline-block bg-transparent text-sm hover:bg-slate-800 text-white font-semibold hover:text-white py-2 px-2 border border-white">
+                        Upload
+                    </button>
+                </form>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <div class="w-full">
+        <h1 class="text-cyan-400 text-center text-xl font-bold py-6">My ❤️ Kitties and uploads</h1>
+    </div>
+
+    <section class="flex justify-center" id="kittiesFavNUploaded">
+        <div class="grid grid-cols-3 gap-6 w-3/5" id="kittiesFavNUploadedContainer" >   
+        </div>
+    </section >
+    <script src="./app.js"></script>
+</body>
+
+</html>
